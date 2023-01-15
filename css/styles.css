@@ -18,12 +18,42 @@ body {
   font-family: "open sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul{
+margin: 0;
+padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
 }
 
 .title {
@@ -54,6 +84,9 @@ body {
 /*------------HERO-------------*/
 
 .header {
+  background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-navigation {
 }
@@ -71,7 +104,7 @@ body {
   color: #ffffff;
 }
 .header-link:hover,
-header-link:focus {
+.header-link:focus {
   color: var(--accent-color);
 }
 
@@ -88,7 +121,7 @@ header-link:focus {
 }
 
 .hero {
-  background-color: #485174;
+  background-color: #626060;
 }
 .hero-list {
 }
@@ -122,6 +155,8 @@ header-link:focus {
 
 /*------------ABOUT-------------*/
 .about {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .about-list {
 }
@@ -131,21 +166,25 @@ header-link:focus {
 }
 .about-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .about-subtitle {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 20px;
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 .about-btn {
   color: #303030;
@@ -154,17 +193,25 @@ header-link:focus {
 /*------------PRICES-------------*/
 .prices {
   background-color: #555555;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .prices-suptitle {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .prices-title {
   color: var(--main-title-color);
+  margin-bottom: 44px;
 }
 .prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 20px;
+
 }
 
-.prices-item {
+.prices-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 .prices-item-text {
   font-weight: 400;
@@ -180,16 +227,27 @@ header-link:focus {
 
 /*------------BENEFITS-------------*/
 .benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .benefits-list {
 }
-.benefits-item span {
+.benefits-item {
+width: 170px;
+height: 133px;
+border: 1px solid #000;
+padding: 20px 24px;
+}
+
+.benefits-item > span {
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  display: block;
+  margin-bottom: 6px;
 }
 .benefits-item-text {
   font-weight: 600;
@@ -200,9 +258,11 @@ header-link:focus {
 }
 .benefits-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .benefits-subtitle {
   font-weight: 400;
@@ -214,20 +274,24 @@ header-link:focus {
 }
 
 /*------------BARBERS-------------*/
-.benefits {
-}
-
 .barbers {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .barbers-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 
 .barbers-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .barbers-list {
+}
+.barbers-content {
+  padding-top: 30px;
 }
 
 .barbers-item {
@@ -238,6 +302,7 @@ header-link:focus {
   line-height: calc(25 / 18);
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 
   color: #303030;
 }
@@ -246,13 +311,19 @@ header-link:focus {
   line-height: calc(19 / 14);
   text-align: center;
   letter-spacing: 0.02em;
-  color:var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*------------GALARY-------------*/
 
+.galary {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .galary-suptitle {
   color: #303030;
+  padding-bottom: 44px;
 }
 
 .visually-hidden {
@@ -290,29 +361,27 @@ header-link:focus {
 .contacts-list {
 }
 .contacts-item {
-  
 }
 .contacts-link {
-font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
-color: #9DA4BD;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
 ..contacts-link.bold {
   font-weight: 700;
 }
 .contacts-text {
   font-weight: 600;
-font-size: 11px;
-line-height: calc(15 / 11);
-text-transform: uppercase;
-color: #FFFFFF;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: #ffffff;
 }
 .contacts-schedule {
   font-weight: 400;
-font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
-color: #9DA4BD;
-
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
