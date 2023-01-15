@@ -72,6 +72,8 @@ img {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-style: normal;
   font-weight: 600;
@@ -80,19 +82,34 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  border: 1px solid #FF6C00;
+  border-radius: 25px;
+  background-color: transparent;
 }
-/*------------HERO-------------*/
+/*------------HEADER-------------*/
 
 .header {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 .header-logo {
+  margin-right: 131px;
 }
 .header-list {
+  display: flex;
+  gap: 30px;
 }
 .header-item {
 }
@@ -115,15 +132,25 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-right: 43px;
 }
 .header-btn {
   color: #ffffff;
 }
-
+/*------------HERO-------------*/
 .hero {
+  
+}
+.hero-container {
+  display: flex;
+}
+.hero-wrap {
   background-color: #626060;
+  flex-grow: 1;
+  padding: 252px 100px 208px;
 }
 .hero-list {
+  width: 100px;
 }
 .hero-item {
 }
@@ -140,9 +167,11 @@ header-link:focus {
 }
 .hero-suptitle {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .hero-title {
   color: var(--main-title-color);
+  margin-bottom: 20px;
 }
 .hero-subtitle {
   font-weight: 400; /* можно не ставити, адже у браузера для заголовків вбудовано також 700 */
@@ -151,6 +180,7 @@ header-link:focus {
   /* or 167% */
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /*------------ABOUT-------------*/
@@ -158,11 +188,24 @@ header-link:focus {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.about-container {
+  display: flex;
+  gap: 30px;
+}
 .about-list {
+  display: flex;
+  gap: 30px;
+  width: calc((100%-30px)/2);
+  flex-shrink: 0;
 }
 .list {
 }
 .about-item {
+  width: calc((100%-30px)/2);
+}
+.about-wrap {
+  max-width: 470px;
+
 }
 .about-suptitle {
   color: #303030;
@@ -192,9 +235,14 @@ header-link:focus {
 
 /*------------PRICES-------------*/
 .prices {
-  background-color: #555555;
+  background-color: #303030;
   padding-top: 120px;
   padding-bottom: 120px;
+}
+.prices-wrap {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
 }
 .prices-suptitle {
   color: rgba(157, 164, 189, 0.6);
@@ -204,10 +252,16 @@ header-link:focus {
   color: var(--main-title-color);
   margin-bottom: 44px;
 }
+
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100%-30px)/2);
 
+}
+.prices-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .prices-item:not(:last-child) {
@@ -223,6 +277,8 @@ header-link:focus {
 
 .prices-btn {
   color: #ffffff;
+  display: block;
+  margin: 0 auto;
 }
 
 /*------------BENEFITS-------------*/
@@ -230,7 +286,16 @@ header-link:focus {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+.benefits-container {
+  display: flex;
+  padding-left: 85px;
+  gap: 130px;
+}
 .benefits-list {
+  display: flex;
+  width: 370px;flex-wrap: wrap;
+  flex-shrink: 0;
 }
 .benefits-item {
 width: 170px;
@@ -238,6 +303,13 @@ height: 133px;
 border: 1px solid #000;
 padding: 20px 24px;
 }
+
+.benefits-item:nth-child(odd) {
+margin-right: 30px;
+}
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+  }
 
 .benefits-item > span {
   font-weight: 700;
@@ -255,6 +327,9 @@ padding: 20px 24px;
   line-height: calc(15 / 11);
   text-align: center;
   color: #303030;
+}
+.benefits-wrap {
+  max-width: 500px;
 }
 .benefits-suptitle {
   color: #303030;
@@ -289,12 +364,15 @@ padding: 20px 24px;
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 .barbers-content {
   padding-top: 30px;
 }
 
 .barbers-item {
+  width: calc((100%-60px)/3);
 }
 .barbers-item-title {
   font-weight: 400;
@@ -324,6 +402,15 @@ padding: 20px 24px;
 .galary-suptitle {
   color: #303030;
   padding-bottom: 44px;
+}
+
+.galary-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.galary-item {
+  width: calc((100-90px)/4);
 }
 
 .visually-hidden {
