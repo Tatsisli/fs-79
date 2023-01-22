@@ -177,6 +177,17 @@ header-link:focus {
   color: var(--main-title-color);
   margin-bottom: 20px;
 }
+
+/*
+  .hero-title::before {
+    content: '1.';
+  }
+  
+  .hero-title::after {
+    content: '!.';
+  }
+*/
+
 .hero-subtitle {
   font-weight: 400; /* можно не ставити, адже у браузера для заголовків вбудовано також 700 */
   font-size: 18px;
