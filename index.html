@@ -19,7 +19,7 @@
       <div class="container header-container">
         <nav class="header-navigation">
         <a href="" class="header-logo">
-          <img src="./img/Logo.jpg" alt="site logo" />
+          <img src="./img/logo.svg" alt="site logo" />
         </a>
         <ul class="header-list list">
           <li class="header-item"><a href="" class="header-link link">About</a></li>
@@ -170,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="barbers">
+      <section class="barbers" id="barbers">
         <div class="container">
           <p class="barbers-suptitle suptitle">For true enjoyers of the atmosphere</p>
           <h2 class="barbers-title title">Our barbers</h2>
@@ -191,9 +191,24 @@
                       <use href="./img/icons.svg#icon-instagram"></use>
                     </svg>
                   </a></li>
-                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link"></a></li>
-                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link"></a></li>
-                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link"></a></li>
+                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link">
+                    <svg class="barbers-soc-icon" width="20p" height="20">
+                    <use href="./img/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link">
+                    <svg class="barbers-soc-icon" width="20p" height="20">
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+                  <li class="barbers-item-soc-item"><a href="" class="barbers-soc-link link">
+                    <svg class="barbers-soc-icon" width="20p" height="20">
+                      <use href="./img/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
                 </ul>
               </div>
             </li class="barbers-item">
@@ -221,6 +236,24 @@
                 <p class="barbers-item-text">Extreme Barber</p>
               </div>
             </li>
+          </ul>
+        </div>
+      </section>
+      <section class="test">
+        <div class="container">
+          <ul class="test-list list">
+            <li class="test-item">
+              <a href="" class="test-link link">
+                <svg class="test-icon" width="106" height="60">
+                  <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+            </li>
+            <li class="test-item"><a href="" class="test-link link"></a></li>
+            <li class="test-item"><a href="" class="test-link link"></a></li>
+            <li class="test-item"><a href="" class="test-link link"></a></li>
+            <li class="test-item"><a href="" class="test-link link"></a></li>
+            <li class="test-item"><a href="" class="test-link link"></a></li>
           </ul>
         </div>
       </section>
@@ -264,43 +297,49 @@
           </ul>
         </div>
       </section>
-      <section class="online">
-        <h2 class="online-title">Online-booking</h2>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts-title title">Contacts</h2>
-        <address class="contacts-adress">
-          <ul class="contacts-list list">
-            <li class="contacts-item">
-              <a href="https://goo.gl/maps/DNSx9ZMqSHzAVsaaA" class="contacts-link bold link"
-                >st. Vasilkivska,7A <br />
-                Kyiv, 08132</a
-              >
-            </li>
-            <li class="contacts-item"><a href="+380441111111">+38 044 111 11 11</a></li>
-            <li class="contacts-item">
-              <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-            </li>
-          </ul>
-        </address>
-        <p class="contacts-text">Working hours</p>
-        <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
-      </section>
+      <div class="contact-wrap">
+        <div class="container">
+          <section class="online">
+            <h2 class="online-title">Online-booking</h2>
+          </section>
+          <section class="contacts">
+            <h2 class="contacts-title title">Contacts</h2>
+            <address class="contacts-adress">
+              <ul class="contacts-list list">
+                <li class="contacts-item">
+                  <a href="https://goo.gl/maps/DNSx9ZMqSHzAVsaaA" class="contacts-link bold link"
+                    >st. Vasilkivska,7A <br />
+                    Kyiv, 08132</a
+                  >
+                </li>
+                <li class="contacts-item"><a href="+380441111111">+38 044 111 11 11</a></li>
+                <li class="contacts-item">
+                  <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                </li>
+              </ul>
+            </address>
+            <p class="contacts-text">Working hours</p>
+            <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+          </section>
+        </div>
+      </div>
     </main>
-    <footer>
-      <p>&copy;Copyright 2020</p>
-      <ul>
-        <li class="">
-          <a href="" target="_blank" rel="noopener noreferrer nofollow"
-            >Instagram</a
-          >
-        </li>
-        <li class="">
-          <a href="" target="_blank" rel="noopener noreferrer nofollow"
-            >Youtube</a
-          >
-        </li>
-      </ul>
+    <footer class="footer">
+     <div class="container footer-container">
+        <p class="footer-copy">&copy;Copyright 2020</p>
+        <ul class="footer-list list">
+          <li class="footer-item">
+            <a class="footer-link link" href="" target="_blank" rel="noopener noreferrer nofollow"
+              >Instagram</a
+            >
+          </li>
+          <li class="footer-item">
+            <a class="footer-link link" href="" target="_blank" rel="noopener noreferrer nofollow"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+     </div>
     </footer>
   </body>
 </html>
