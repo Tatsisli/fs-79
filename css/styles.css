@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'open sans', sans-serif;
+  font-family: "open sans", sans-serif;
 }
 
 h1,
@@ -85,14 +85,14 @@ img {
 }
 
 .suptitle::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: currentColor;
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -111,11 +111,18 @@ img {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 /*------------HEADER-------------*/
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -145,10 +152,23 @@ img {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 200ms linear;
 }
 
 .current {
   color: var(--accent-color);
+  position: relative;
+}
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -54px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  transition: color 200ms linear;
 }
 
 .header-link:hover,
@@ -164,6 +184,12 @@ img {
   text-transform: uppercase;
   color: var(--main-title-color);
   margin-right: 43px;
+  transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
 }
 
 .header-btn {
@@ -183,8 +209,26 @@ img {
   flex-grow: 1;
   padding: 252px 100px 208px;
 }
-.hero-list {
+
+.hero-soc{
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+}
+.hero-list::before {
+  content:'';
+  width: 60px;
+  height: 1px;
+  background-color: var(--second-title-color);
 }
 .hero-item {
 }
@@ -194,6 +238,7 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 200ms linear;
 }
 
 .hero-link:hover,
@@ -206,7 +251,7 @@ img {
   margin-bottom: 20px;
 }
 .hero-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
@@ -217,7 +262,7 @@ img {
 }
 
 .hero-title::before {
-  content: '';
+  content: "";
   width: 40px;
   height: 40px;
   background-image: url(../img/img-barber2.jpg);
@@ -226,7 +271,7 @@ img {
 }
 
 .hero-title::after {
-  content: '';
+  content: "";
   font-size: 35px;
 }
 
@@ -240,7 +285,6 @@ img {
   color: #9da4bd;
   max-width: 360px;
 }
-
 
 /*------------ABOUT-------------*/
 .about {
@@ -345,7 +389,7 @@ img {
 }
 
 .prices-item:before {
-  content: '';
+  content: "";
   flex-grow: 1;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -407,7 +451,6 @@ img {
 .benefits-item:nth-child(even) {
   margin-top: 30px;
 }
-
 .benefits-item > span {
   font-weight: 700;
   font-size: 42px;
@@ -417,10 +460,12 @@ img {
   color: #303030;
   display: block;
   margin-bottom: 6px;
+  position: relative;
 }
-
 .benefits-item > span::after {
-  content: '+';
+  content: "+";
+  position: absolute;
+  top: 7px;
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -428,7 +473,6 @@ img {
   color: #ff6c00;
   vertical-align: top;
 }
-
 /* .benefits-item > span::before {
   content: '+';
 } */
@@ -439,7 +483,6 @@ img {
   text-align: center;
   color: #303030;
 }
-
 .benefits-wrap {
   max-width: 500px;
 }
@@ -483,6 +526,26 @@ img {
 .barbers-item {
   width: calc((100% - 60px) / 3);
 }
+.barbers-item:hover .barbers-top-text {
+  transform: translateY(0%);
+}
+.barbers-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.barbers-top-text {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: rgba(255, 106, 0, 0.486);
+  padding: 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 200ms linear;
+  overflow: auto;
+}
 
 .barbers-content {
   padding-top: 30px;
@@ -523,6 +586,7 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: background-color 200ms linear;
 }
 
 .barbers-soc-icon {
@@ -533,7 +597,7 @@ img {
   background-color: rgb(71, 27, 20);
 }
 
-/* .test {
+.test {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -556,6 +620,7 @@ img {
   justify-content: center;
   border-radius: 5px;
   color: #999999;
+  transition: border-color 200ms linear, color 200ms linear;
 }
 
 .test-icon {
@@ -565,7 +630,7 @@ img {
 .test-link:is(:hover, :focus) {
   border-color: var(--accent-color);
   color: var(--accent-color);
-} */
+}
 
 /*------------GALARY-------------*/
 
@@ -689,7 +754,7 @@ img {
 }
 
 .footer-list::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: #303030;
@@ -704,4 +769,3 @@ img {
   letter-spacing: 0.2em;
   color: #303030;
 }
-
