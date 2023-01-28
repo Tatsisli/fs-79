@@ -505,13 +505,13 @@ img {
   margin-bottom: 30px;
 }
 
-.barbers-soc-list {
+.barbers-item-soc-list {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.barbers-soc-item {
+.barbers-item-soc-item {
   width: 44px;
   height: 44px;
 }
@@ -533,7 +533,7 @@ img {
   background-color: rgb(71, 27, 20);
 }
 
-.test {
+/* .test {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -565,7 +565,7 @@ img {
 .test-link:is(:hover, :focus) {
   border-color: var(--accent-color);
   color: var(--accent-color);
-}
+} */
 
 /*------------GALARY-------------*/
 
@@ -645,7 +645,7 @@ img {
   color: #9da4bd;
 }
 
-.contacts-link.bold {
+.contacts-link .bold {
   font-weight: 700;
 }
 
