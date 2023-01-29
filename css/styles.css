@@ -769,3 +769,41 @@ img {
   letter-spacing: 0.2em;
   color: #303030;
 }
+/*------------MODAL-------------*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.518);
+  transition: opacity 200ms linear, visibility 200ms linear;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 200ms linear;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  background-color: #555555, colar #ff6c00; /*в дз кнопку брати з макета */
+  display: block;
+  margin-left: auto;
+}

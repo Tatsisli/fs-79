@@ -45,7 +45,7 @@
         <a href="tel:+380441111111" class="header-tel link"
           >+38 044 111 11 11</a
         >
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button class="header-btn btn" data-modal-open type="button">Online-booking</button>
       </div>
     </header>
     <main>
@@ -480,5 +480,12 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close type="button">X</button>
+        <!-- в домашці має бути свг іконка -->
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
