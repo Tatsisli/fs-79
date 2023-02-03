@@ -45,7 +45,9 @@
         <a href="tel:+380441111111" class="header-tel link"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" data-modal-open type="button">Online-booking</button>
+        <button class="header-btn btn" data-modal-open type="button">
+          Online-booking
+        </button>
       </div>
     </header>
     <main>
@@ -484,6 +486,34 @@
       <div class="modal">
         <button class="modal-close" data-modal-close type="button">X</button>
         <!-- в домашці має бути свг іконка -->
+        <p class="modal-title">Заголовок вікна</p>
+        <form class="modal-form">
+          <!-- action="#" видалено, бо зараз вын не актуальний -->
+          <input
+            type="text"
+            class="modal-input"
+            name="user-name"
+            placeholder="введіть імя*"
+            required
+            minlength="2"
+          />
+          <input
+            type="email"
+            class="modal-input"
+            name="user-email"
+            placeholder="введіть пошту"
+          />
+          <input
+            type="tel"
+            class="modal-input"
+            name="user-tel"
+            title="+38 (050) 111-11-11"
+            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            placeholder="введіть телефон*"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

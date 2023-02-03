@@ -806,4 +806,33 @@ img {
   background-color: #555555, colar #ff6c00; /*в дз кнопку брати з макета */
   display: block;
   margin-left: auto;
+  margin-bottom: 10px;
+}
+.modal-title {
+  font-style: 18px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #090b13;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #0b36e5;
+  padding-left: 15px;
+}
+.modal-input::placeholder {
+  color: #ff6c00;
+
+}
+.modal-input:not(:focus):not(:placeholder-shown):valid {
+  background-color: rgb(171, 239, 206);
+}
+.modal-input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: rgb(234, 159, 159);
 }
